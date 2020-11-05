@@ -1,22 +1,23 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-class MainTest {
-  public static void main(String[] args) {
-    
+public class MainTest {
+
+  @Test
+  public void testNothing() {
   }
 
-  @test
-  public void testNothing() {}
+  @Test
+  public void testSomeStuff() {
 
-  @test
-  public void testSomeStuff(){
-    
-    assertTrue(2 + 3 == 5);
+    assertTrue("FIRST ASSERTION FAILED", 2 + 3 == 5);
 
-    String s = new String;
-    assertNotNull(s);
+    String s = new String();
 
-    assertTrue((3*7)>(4*5));
+    assertNotNull("SECOND ASSERTION FAILED", s);
+
+    assertTrue("THIRD ASSERTION FAILED", (3 * 7) > (4 * 5));
+
   }
+
 }
